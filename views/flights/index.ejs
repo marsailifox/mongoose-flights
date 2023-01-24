@@ -1,0 +1,33 @@
+<%- include('../partials/header') %>
+<%- include('../partials/nav') %>
+
+<table id="table-content" class="table table-striped table-dark"><br>
+    <thead>
+        <tr>
+            <th>Airline</th>
+            <th>Airport</th>
+            <th>Flight Number</th>
+            <th>Departure</th>
+            <th>Details</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% flights.forEach(function(f) { %>
+        <tr>
+            <td><%= f.airline %></td>
+            <td><%= f.airport %> </td>
+            <td><%= f.flightNo %></td>
+            <td><%= f.departs  %> </td>
+            <td><a href="/flights/<%= f._id %>">DETAILS</a></td>
+            <td>
+                <div>
+                    <form action="flights/<%= f._id %>?_method=DELETE" class="delete-form" method="POST">
+                        <button type="submit" class="btn btn-outline-danger btn-sm" >X</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

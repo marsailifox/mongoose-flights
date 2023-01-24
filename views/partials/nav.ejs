@@ -1,0 +1,10 @@
+<nav class="navbar fixed-top navbar-dark bg-dark" >
+    <a class="navbar-brand" href="/">
+        Mongoose Airline Flights
+    </a>
+    <div class="btn-group">
+        <a class="btn" href="/destinations/new" <%- title === 'Add Destination' ? 'class="nav-link active"' : '' %>>Destination</a>
+        <a class="btn" href="/flights/new" <%- title === 'Add Flight' ? 'class="nav-link"' : '' %>>Flight</a>
+        <a class="btn" href="/flights" <%- title === 'All Flights' ? 'class="nav-link"' : '' %>>All Flights</a>
+    </div>
+</nav>

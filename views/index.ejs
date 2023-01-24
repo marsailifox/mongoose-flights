@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+ <%- include('./partials/header') %> 
   <body>
-    <h1><%= title %></h1>
+    <h1 id="h1-display" class="display-3"><%= title %></h1>
     <p>Welcome to <%= title %></p>
+    <div>
+      <a type="button" href="./flights">Click Here</a>
+    </div>
   </body>
-</html>
+</html><br>
+
+<%- include('./partials/footer') %> 
